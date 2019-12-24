@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Batch:</strong>
+  <%= @batch_membership.batch %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @batch_membership.user %>
+</p>
+
+<%= link_to 'Edit', edit_batch_membership_path(@batch_membership) %> |
+<%= link_to 'Back', batch_memberships_path %>

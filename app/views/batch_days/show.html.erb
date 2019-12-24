@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Batch: <%= @batch.number %></strong>
+  <%= @batch_day.batch %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @batch_day.title %>
+</p>
+<%= link_to "add student", new_batch_membership_path %>
+
+
+<%= link_to 'Edit', edit_batch_day_path(@batch_day) %> |
+<%= link_to 'Back', batch_days_path %>

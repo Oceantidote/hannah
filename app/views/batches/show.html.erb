@@ -1,0 +1,41 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <p>
+    <strong>Number:</strong>
+    <%= @batch.id %>
+  </p>
+
+  <p>
+    <strong>Start date:</strong>
+    <%= @batch.start_date %>
+  </p>
+
+  <p>
+    <strong>End date:</strong>
+    <%= @batch.end_date %>
+  </p>
+
+  <div class="row">
+    <div class="col-6">
+      <%  @batch.batch_days.each do |day| %>
+        <p><%= day.title %></p>
+      <% end %>
+
+    </div>
+    <div class="col-6">
+      <% @batch.batch_memberships.each do |member| %>
+        <p><%= member.user.email %></p>
+      <% end %>
+
+    </div>
+  </div>
+
+  <%= link_to "add student", new_batch_batch_membership_path(@batch) %>
+  <br>
+
+  <%= link_to "add day", new_batch_batch_day_path(@batch) %>
+
+  <%= link_to 'Edit', edit_batch_path(@batch) %> |
+  <%= link_to 'Back', batches_path %>
+
+</div>

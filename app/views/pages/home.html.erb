@@ -1,2 +1,19 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <h1>Learn how to nurse with Hannah</h1>
+  <%= link_to "Create Batch", new_batch_path %>
+  <div class="row">
+    <div class="col-6">
+      <h3>Current batch</h3>
+      <%= @current.id %>
+      <% @current.batch_memberships.each do |member| %>
+        <p><%= member.user.email %></p>
+      <% end %>
+    </div>
+    <div class="col-6">
+      <h3>Upcoming Batches</h3>
+    </div>
+  </div>
+</div>
+
+
+
